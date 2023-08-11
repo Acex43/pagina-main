@@ -1,0 +1,263 @@
+* {
+  /*box-sizing: border-box;*/
+  margin: 0;
+  padding: 0;
+}
+
+*::selection{
+  background-color: rgb(86, 228, 202);
+  color: black;
+}
+
+html,
+body {
+  font-size: 18px;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100vh;
+}
+
+html::-webkit-scrollbar{
+  background: transparent;
+  display: none;
+}
+
+html::-webkit-scrollbar:vertical{
+  background: transparent;
+  width: 10px;
+  margin: 0;
+  padding: 0;
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: rgba(153, 153, 153, 1);
+  border-radius: 12px;
+  width: 3px;
+  height: 2px;
+  display: none;
+}
+
+html::-webkit-scrollbar-button{
+    display: none;
+}
+
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  /*padding: 40px;*/
+}
+
+.contenedor-principal {
+  width: 100%;
+  min-height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  html::-webkit-scrollbar{
+    display: flow-root;
+  }
+
+  html::-webkit-scrollbar-thumb{
+    display: flow-root;
+  }
+}
+
+/*SWITCH COLOR*/
+
+/* HABILIDADES */
+
+.habilidades{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 120vh;
+  background-color: black;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: whitesmoke;
+  font-family: sans-serif;
+  cursor: crosshair;
+}
+
+.h2-habilidades{
+  margin-top: 100px;
+  margin-bottom: 40px;
+  font-size: 45px;
+}
+
+.contenedor-carta-texto{
+  position: relative;
+  margin-bottom: 100px;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 100%;
+  gap: 1rem;
+  /*border: 2px solid blue;*/
+}
+
+@media screen and (max-width: 800px) {
+  html, 
+  body{
+    overflow-x: hidden;
+  }
+
+  .habilidades{
+    height: fit-content;
+    padding-bottom: 150px;
+    padding-top: 150px;
+  }
+
+  .grid{
+    margin-top: 200px;
+    grid-auto-flow: row;
+    gap: 0rem;
+  }
+}
+
+
+/* OPINIONES */
+
+.h3-opiniones{
+  color: whitesmoke;
+  font-size: 50px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+@media screen and (max-width: 700px){
+  .h3-opiniones{
+    font-size: 40px;
+    padding-top: 130px;
+    padding-bottom: 80px;
+  }
+}
+
+.opiniones{
+  position: relative;
+  width: 100%;
+  height: max-content;
+  background-color: #060606;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding-bottom: 150px;
+  margin-top: 0;
+  margin-bottom: 0;
+  /*border: 2px solid red;*/
+}
+
+.emoticono1-opiniones{
+  position: absolute;
+  content: " ";
+  width: 25vw;
+  min-width: 350px;
+  height: 70vh;
+  background-image: url(imagenes/fondos/mensaje-right.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 0;
+  padding-left: 10px;
+  z-index: 1;
+  animation: bajar 4s infinite;
+  /*border: 2px solid green;*/
+}
+
+
+.emoticono2-opiniones{
+  position: absolute;
+  content: " ";
+  width: 25vw;
+  min-width: 350px;
+  height: 70vh;
+  background-image: url(imagenes/fondos/mensaje-left.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  bottom: -20px;
+  right: 0;
+  padding-right: 10px;
+  z-index: 1;
+  animation: bajar 4s infinite;
+  /*border: 2px solid green;*/
+}
+
+@media screen and (max-width: 1000px){
+  .emoticono1-opiniones{
+    background-size: 120%;
+    margin-top: 40px;
+    /*border: 1px solid red;*/
+  }
+
+  .emoticono2-opiniones{
+    background-size: 120%;
+    margin-bottom: -120px;
+    /*border: 1px solid red;*/
+  }
+
+}
+
+@media screen and (max-width: 800px){
+  .h3-opiniones{
+    padding-bottom: 25px;
+  }
+
+  .emoticono1-opiniones{
+    background-size: 90%;
+    margin-top: 100px;
+    padding: 10px 0px 10px 0px;
+    width: fit-content;
+    height: 240px;
+    /*border: 1px solid #999;*/
+    top: 90px;
+    left: -70px;
+  }
+
+  .emoticono2-opiniones{
+    background-size: 90%;
+    margin-top: 100px;
+    padding: 10px 0px 10px 0px;
+    width: fit-content;
+    height: 240px;
+    /*border: 1px solid #999;*/
+    bottom: 100px;
+    right: -70px;
+  }
+
+}
+
+@keyframes bajar {
+  0%{
+      transform: translateY(-10px);
+  }
+  50%{
+      transform: translateY(5px);
+  }
+  100%{
+      transform: translateY(-10px);
+  }
+}
+
+
+/* FOOTER */
+
+.footer{
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+.contenedor-switch{
+    width: max-content;
+    height: max-content;
+    /*border: 2px solid red;*/
+}
+
+.switch {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .switch img{
+    cursor: pointer;
+  }
+  
+  input:checked{
+    background-color: #303136;
+    border: 1px solid white;
+  }
+  
+  input:checked {
+    left: calc(100% - (var(17px,1.4em) + var(0.22em,0.3em)));
+    }

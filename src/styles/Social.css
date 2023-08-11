@@ -1,0 +1,30 @@
+.contenedor-social{
+    max-width: 200px;
+    /*border: 2px solid white;*/
+}
+
+.boton-social{
+    position: relative;
+    width: 3vw;
+    min-width: 30px;
+    max-width: 40px;
+    height: auto;
+    /*border: 2px solid whitesmoke;*/
+    border-radius: 50%;
+}
+
+.contenedor-social img{
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    filter: invert();
+    background-color: transparent;
+}
+
+.boton-social:hover{
+    scale: 1.2;
+    transition: 450ms;
+}
+
