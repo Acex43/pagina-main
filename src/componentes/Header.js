@@ -6,7 +6,7 @@ function Header({titulo}){
     return(
         <div className="contenedor-header">
             <div className="titulo-header">
-            <h1>{titulo}</h1>
+            <h1 className="h1-header">{titulo}</h1>
             </div>
         </div>
 

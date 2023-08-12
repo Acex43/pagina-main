@@ -1,5 +1,5 @@
 .contenedor-icono-texto{
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
     color: black;
     font-weight: lighter;
     position: relative;
@@ -17,29 +17,20 @@
     0px 0px 5.3px rgba(255, 255, 255, 0.077),
     0px 0px 10px rgba(255, 255, 255, 0.095),
     0px 0px 17.9px rgba(255, 255, 255, 0.113),
-    0px 0px 33.4px rgba(255, 255, 255, 0.137),
+    0px 0px 4px rgba(255, 255, 255, 0.137),
     0px 0px 25px rgba(255, 255, 255, 0.19);
     
 }
 
-@media screen and (max-width: 800px) {
-    .contenedor-icono-texto{
-        width: 80vw;
-        max-width: 400px;
-        height: fit-content;
-        /*border: 3px solid red;*/
-    }
-
-    .h4-carta-texto{
-        font-size: 16px;
-    }
-}
-
 .h4-carta-texto{
-    padding: 10px;
+    padding: 20px 10px 0px 10px;
     margin: 25px;
     font-size: 1vw + 0.5rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
+
 
 .componente-imagen{
     display: flex;
@@ -65,5 +56,36 @@
     max-width: 85px;
     aspect-ratio: 3/2;
     object-fit: contain;
+}
+
+@media screen and (max-width: 800px) {
+    .contenedor-icono-texto{
+        width: 80vw;
+        max-width: 400px;
+        height: fit-content;
+        /*border: 3px solid red;*/
+    }
+
+    .h4-carta-texto{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .contenedor-icono-texto{
+        width: 60vw;
+        padding: 0;
+        margin: 0;
+    }
+    .h4-carta-texto{
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .componente-imagen{
+        margin: 10px;
+        padding: 5px;
+    }
 }
 

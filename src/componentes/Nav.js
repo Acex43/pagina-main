@@ -1,6 +1,5 @@
 import React from "react";
 import '../styles/Nav.css';
-import SwitchColor from "./SwitchColor.js";
 
 
 function Nav({menu}){
@@ -15,14 +14,9 @@ function Nav({menu}){
         </label>
         <input type="checkbox" id="menu" className="nav-input" />
                 <ul className="nav-menu">
-                    <SwitchColor 
-                        color="black" />
                     <li className="nav-item"><a className="nav-link" href="{linkUno}">Inicio</a></li>
-                    <li className="nav-item"><a className="nav-link" href="{linkDos}">Sobre</a></li>
-                    <li className="nav-item"><a className="nav-link" href="{linkTres}">Contacto</a></li>
-                    {/*<div className="elemento-switch">
-                        <SwitchColor />
-                    </div>*/}
+                    <li className="nav-item"><a className="nav-link" href="{linkDos}">Proyectos</a></li>
+                    <li className="nav-item"><a className="nav-link" href="{linkTres}">Herramientas</a></li>
                 </ul>
             </nav>
         </div>

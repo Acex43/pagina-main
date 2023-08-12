@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <div className="contenedor-principal">
+        
         {/*Nav Menu*/}
         <Nav
           menu={"bx-menu.svg"}
@@ -18,7 +19,7 @@ function App() {
         />
 
         {/* Header */}
-        <Header titulo="Bienvenido Programador" />
+        <Header titulo="Juanma Vizcaíno" />
 
         {/* Section Skills */}
         <div className="habilidades">
